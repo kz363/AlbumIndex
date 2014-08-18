@@ -9,7 +9,7 @@ group :development, :test do
 	gem 'factory_girl_rails'
 	gem 'faker'
 end
-
+gem 'pry'
 group :test do
 	gem 'capybara', '~> 2.2.1'
 	gem 'selenium-webdriver', '~> 2.38.0'

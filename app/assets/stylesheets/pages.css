@@ -19,3 +19,7 @@
 .search_form h2 {
 	margin: 0;
 }
+
+p.error {
+	color: red;
+}
