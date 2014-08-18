@@ -1,0 +1,3 @@
+== AlbumIndex
+
+An example search interface to find a song by any combination of title, album title, and artist name.
