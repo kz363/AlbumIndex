@@ -1,7 +1,11 @@
-<div class="header">
-	<h1>Song Search</h1>
-</div>
 <div class="search">
 	<div class="search_form">
+		<h2>Song Search</h2>
+		<%= form_tag("/search", method: "get") do %>
+			<%= text_field_tag(:song, nil, placeholder: "Song Title") %><br>
+			<%= text_field_tag(:album, nil, placeholder: "Album Title") %><br>
+			<%= text_field_tag(:artist, nil, placeholder: "Artist Name") %><br>
+			<%= submit_tag("Search") %>
+		<% end %>
 	</div>
 </div>

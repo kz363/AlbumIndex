@@ -1,34 +1,21 @@
-body {
+.search {
 	width: 720px;
 	height: 100%;
 	font-family: Helvetica;
 	margin: auto;
+	padding: 1% 0% 1% 0%;
 	background: rgb(255, 255, 255);
 	background: rgba(255, 255, 255, 0.9);
-}
-
-.header {
-	display: inline;
-	text-align: center;
-}
-
-.header h1 {
-	border: 1px dotted black;
-	
-	margin: 0;
-	font-size: 4em;
-}
-
-.search {
-	padding-bottom: 1%;
 	border: 1px dotted black;
 }
 
 .search_form {
 	display: table;
 	margin: 0 auto;
-	padding-left: 5%;
-	padding-right: 5%;
-	padding-bottom: 1.33em;
+	padding: 1% 5% 1% 5%;
 	border: 1px solid black;
+}
+
+.search_form h2 {
+	margin: 0;
 }
