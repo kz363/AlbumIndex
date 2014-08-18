@@ -1,4 +1,4 @@
-.search {
+div.search {
 	width: 720px;
 	height: 100%;
 	font-family: Helvetica;
@@ -9,17 +9,34 @@
 	border: 1px dotted black;
 }
 
-.search_form {
+div.search_form {
 	display: table;
 	margin: 0 auto;
 	padding: 1% 5% 1% 5%;
 	border: 1px solid black;
 }
 
-.search_form h2 {
+div.search_form h2 {
 	margin: 0;
 }
 
 p.error {
 	color: red;
+}
+
+div.song_list {
+	height: 600px;
+	overflow: auto;
+	margin-top: 5%;
+}
+
+div.song_list h2 {
+	padding-left: 5%;
+}
+
+div.song {
+	border: 1px dotted black;
+	width: 90%;
+	padding-left: 1%;
+	margin: 0 auto;
 }

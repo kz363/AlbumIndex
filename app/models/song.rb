@@ -16,22 +16,26 @@ class Song < ActiveRecord::Base
 
   	# I understand this code is not optimal, but it's the best way I know how to do this
   	# with my current knowledge.
-  	if title && album && artist
-  		songs = Song.where( name: title, album_id: album.id )
-  	elsif title && album
-  		songs = Song.where( name: title, album_id: album.id )
-  	elsif title && artist
-  		songs = Song.where( name: title, artist_id: artist.id )
+  	if title != "" && album && artist
+      songs = Song.where( name: title, album_id: album.id )
+  	elsif title != "" && album
+      songs = Song.where( name: title, album_id: album.id )
+  	elsif title != "" && artist
+      songs = Song.where( name: title, artist_id: artist.id )
   	elsif album && artist
-  		songs = Song.where( album_id: album.id, artist_id: artist.id )
-  	elsif title
-  		songs = Song.where( name: title )
+      songs = Song.where( album_id: album.id, artist_id: artist.id )
+  	elsif title != ""
+      songs = Song.where( name: title )
   	elsif album
-  		songs = Song.where( album_id: album.id )
+      songs = Song.where( album_id: album.id )
   	elsif artist
-  		songs = Song.where( artist_id: artist.id )
-  	end
+      songs = Song.where( artist_id: artist.id )
+    end
 
   	songs.to_a
+  end
+
+  def to_html
+    "<div class=song name=#{self.name}><p>Name: #{self.name}</p><p>Artist: #{self.artist.name}</p><p>Album: #{self.album.name}</p></div>"
   end
 end

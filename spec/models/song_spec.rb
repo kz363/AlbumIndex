@@ -41,4 +41,11 @@ describe Song do
       expect(Song.find_by(title: "song4", album: "album", artist: "artist")).to eq([@song4])
     end
   end
+
+  describe "#to_html" do
+    it "returns a string representation of a div" do
+      song1 = create(:song, name: "song1")
+      expect(song1.to_html[0..3]).to eq('<div')
+    end
+  end
 end
