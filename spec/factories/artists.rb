@@ -2,6 +2,6 @@
 
 FactoryGirl.define do
   factory :artist do
-    name "MyString"
+    name { Faker::Name.name }
   end
 end

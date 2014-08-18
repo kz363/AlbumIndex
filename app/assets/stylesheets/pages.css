@@ -13,12 +13,15 @@ body {
 }
 
 .header h1 {
+	border: 1px dotted black;
+	
 	margin: 0;
 	font-size: 4em;
 }
 
 .search {
 	padding-bottom: 1%;
+	border: 1px dotted black;
 }
 
 .search_form {
