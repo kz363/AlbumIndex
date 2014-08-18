@@ -3,11 +3,12 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.19'
 gem 'pg'
 gem 'jquery-rails'
-gem 'pry'
+
 group :development, :test do
 	gem 'rspec-rails', '~> 2.14.1'
 	gem 'factory_girl_rails'
 	gem 'faker'
+	gem 'pry'
 end
 
 group :test do

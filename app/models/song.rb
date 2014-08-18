@@ -7,14 +7,14 @@ class Song < ActiveRecord::Base
   # With the way the database is setup, there can be multiple songs with the same names, but
   # album and artist names are unique. This is accounted for in the many conditionals in the method.
   def self.find_by(args={})
-  	title = args.fetch(:title, nil)
+  	title = args.fetch(:title, "")
   	album_name = args.fetch(:album, nil)
   	artist_name = args.fetch(:artist, nil)
     artist = Artist.find_by_name( artist_name )
     album = Album.find_by_name( album_name )
     songs = []
 
-  	# I understand this code is not optimal, but it's the best way I know how to do this
+    # I understand this code is not optimal, but it's the best way I know how to do this
   	# with my current knowledge.
   	if title != "" && album && artist
       songs = Song.where( name: title, album_id: album.id )
